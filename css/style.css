@@ -61,6 +61,7 @@ body
 
 .file-formats{
     display: flex;
+    margin: 0 auto;
 }
 .file-formats img{
     padding: 0 5px;
@@ -135,7 +136,32 @@ form button{
     display: none;
 }
 
-@media (max-width: 900px) {
+
+@media (min-width: 768px) and (max-width: 899px){
+    form {
+        padding: 0;
+    }
+    .form-window{
+        width: 95vw;
+    }
+    .form-header {
+        display: block;
+    }
+    .form-header-mobile {
+        display: none;
+    }
+    .inner-images img:nth-child(1) {
+        width: 360px;
+    }
+    .inner-images img:nth-child(2) {
+        width: 250px;
+    }
+    .inner-images img:nth-child(3) {
+        width: 175px;
+    }
+}
+
+@media (max-width: 767px) {
     form {
         padding: 0;
     }
@@ -155,7 +181,7 @@ form button{
         display: block;
     }
     label {
-        font-size: 12px;
+        font-size: 14px;
     }
     .close-icon{
         z-index: 9999;
@@ -171,8 +197,10 @@ form button{
     }
     .inner-images {
         position: relative;
-        margin-top: 197px;
+        margin-top: 200px;
         height: unset;
+        text-align: center;
+        margin-left: -250px;
     }
     .inner-images img:nth-child(1){
         width: 280px;
