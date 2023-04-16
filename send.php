@@ -10,7 +10,7 @@ $company = 'Набор файлов для руководителя';
 $ip = $_SERVER['REMOTE_ADDR'];
 $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 
-$to = 'sw1r1doff@yandex.ru';
+$to = 'order@salesgenerator.pro';
 $subject = 'Набор файлов для руководителя';
 if($_POST['username'] == 'null'){
     $message = '+7&nbsp;'.$_POST['phone'];
