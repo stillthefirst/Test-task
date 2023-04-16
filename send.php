@@ -12,12 +12,7 @@ $details = json_decode(file_get_contents("http://ipinfo.io/{$ip}/json"));
 
 $to = 'order@salesgenerator.pro';
 $subject = 'Набор файлов для руководителя';
-if($_POST['username'] == 'null'){
-    $message = '+7&nbsp;'.$_POST['phone'];
-}
-else{
-    $message = '<h1>Запрос на получение набора файлов для руководителя</h1>'.'<br>'.'<h3>Телефон - '.$phone.'</h3><br>'.'<h3>Почта - '.$email.'</h3>'.'<br>'.'<h3>IP-Адрес - '.$ip.'</h3>'.'<br>'.'<h3>Город - '.$details->city.'</h3>';
-}
+$message = '<h1>Запрос на получение набора файлов для руководителя</h1>'.'<br>'.'<h3>Телефон - '.$phone.'</h3><br>'.'<h3>Почта - '.$email.'</h3>'.'<br>'.'<h3>IP-Адрес - '.$ip.'</h3>'.'<br>'.'<h3>Город - '.$details->city.'</h3>';
 $headers = 'MIME-Version: 1.0' . "\r\n" . 'Content-type: text/html; charset=utf-8' . "\r\n";
 mail($to, $subject, $message, $headers);
 
